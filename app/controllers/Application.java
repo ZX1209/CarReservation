@@ -18,4 +18,10 @@ public class Application extends Controller {
         renderText("this is a test page!");
     }
 
+
+    public static void secondtest() {
+
+        render("app/Views/Application/TestPage.html");
+    }
+
 }
