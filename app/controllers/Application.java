@@ -24,4 +24,10 @@ public class Application extends Controller {
         render("app/Views/Application/TestPage.html");
     }
 
+    public static void GJsLearning()
+    {
+        render("app/Views/Application/GJsLearning.html");
+
+    }
+
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is Gao's Js learning and practise place</title>
+    <script type="text/javascript" src="public/javascripts/jquery-1.6.4.min.js"></script>
+</head>
+<body>
+<p id="demo">this is a test pragram which will be chang after click one button</p>
+
+<script>
+    document.write("<h1>This is a heading</h1>");
+    document.write("<p>This is a paragraph.</p>");
+
+</script>
+<script>
+    function myfunction()
+    {
+        x=document.getElementById("demo");
+        x.innerHTML="Hello javascript heiehiehei!"
+    }
+</script>
+<button type="button"  onclick="alert('Welcome!')">点击这里</button>
+<button type="button"  onclick="myfunction()">嘿嘿</button>
+
+
+<h1>分割-------------------------------------------------</h1>
+<script>
+    function changeImage()
+    {
+        element=document.getElementById('myimage')
+        if (element.src.match("favicon"))
+        {
+            element.src="/public/images/test.png";
+        }
+        else
+        {
+            element.src="/public/images/favicon.png";
+        }
+    }
+</script>
+
+<img id="myimage"  onclick="changeImage()" src="/public/images/test.png">
+
+
+<h1>分割2-------------------------------------------------</h1>
+
+<h1>我的第一段 JavaScript</h1>
+
+<p id="demo2">
+    JavaScript 能改变 HTML 元素的样式。
+</p>
+
+<script>
+    function changecolor()
+    {
+        x=document.getElementById("demo2"); // 找到元素
+        x.style.color="#ff0000";          // 改变样式
+    }
+</script>
+
+<button type="button" onclick="changecolor()">点击这里</button>
+
+<h1>分割3-------------------------------------------------</h1>
+<script>
+function postit()
+{
+
+    x=document.getElementById("thisis");
+    x.innerHTML="Hello javascript heiehiehei!"
+
+}
+
+</script>
+
+<input type="text" value="人名" id="thisis">
+
+<input type="text" value="车牌" id="e">
+
+<input type="text" value="电话" id="d">
+
+<button type="button"  id="t" onclick="postit()">提交</button>
+
+</body>
+</html>
