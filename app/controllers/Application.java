@@ -3,13 +3,18 @@ package controllers;
 import play.*;
 import play.mvc.*;
 
+import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 import models.*;
 
 public class Application extends Controller {
 
+
+
     public static void index() {
+
         render();
     }
 
@@ -18,9 +23,26 @@ public class Application extends Controller {
         renderText("this is a test page!");
     }
 
+    //save   保存进数据库
+    public static void save() {
+        News testNews = new News(1l,"asdf");
+        testNews.save();
+
+        render();
+    }
 
     public static void secondtest() {
 
+        //find
+        News newSingle = News.find("from News where cId=? order by cId desc",1l).first();
+        //cmd printf
+        System.out.println(newSingle.getcTitle());
+        System.out.println("====================");
+        //findall
+        List<News> newsList=News.findAll();
+        for(News news:newsList){
+            System.out.println(news.getcTitle()+"/////////////////"+news.getId());
+        }
         render("app/Views/Application/TestPage.html");
     }
 
