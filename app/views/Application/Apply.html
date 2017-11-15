@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .center {text-align: center}
+    </style>
+</head>
+<body>
+
+<script>
+    function checkMobile(sMobile){
+
+
+        if(!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test(sMobile))){
+
+            //alert("不是完整的11位手机号或者正确的手机号前七位");
+
+            //document.mobileform.mobile.focus();
+
+            return false;
+
+        }
+        return true;
+
+    }
+
+    function btn() {
+        var username=$("#username").val();
+        $.ajax({
+            type : "POST",
+            url:"http://202.119.160.97",             //需要链接到服务器地址
+            data:{
+                "username":username
+            },
+            success: function (data, status) {//请求成功后的回调函数有两个参数
+                //var data_json=eval(data);
+                if(data==="0"){
+                    location.href="http://baidu.com";
+                }else{
+                    alert("失败");
+                }
+            }});
+
+
+    }
+
+    function postit() {
+        var postman=document.getElementById("postman");
+        var carnumber=document.getElementById("carnumber");
+        var telephone=document.getElementById("telephone");
+        if(checkMobile(telephone.value)) {
+            alert(postman.value + "\n" + carnumber.value + "\n" + telephone.value);
+        }
+        else {
+            alert("number error");
+        }
+    }
+</script>
+
+<div class="center">
+
+<input type="text" value="人名" id="postman">
+
+<input type="text" value="车牌" id="carnumber">
+
+<input type="text" value="电话" id="telephone">
+
+<button type="button"  id="t" onclick="postit()">提交</button>
+</div>
+
+</body>
+</html>
