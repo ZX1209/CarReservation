@@ -51,6 +51,11 @@ public class Application extends Controller {
         render("app/Views/Application/GJsLearning.html");
 
     }
+    public static void log_in()
+    {
+        render("app/Views/Application/log_in.html");
+
+    }
 
 
 

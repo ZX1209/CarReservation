@@ -4,8 +4,7 @@
 
 # Home page
 GET     /                                       Application.index
-
-
+GET     /                                       Application.log_in
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
