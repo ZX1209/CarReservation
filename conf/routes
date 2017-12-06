@@ -3,8 +3,8 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
-GET     /                                       Application.log_in
+GET     /                                       Application.order
+
 
 
 

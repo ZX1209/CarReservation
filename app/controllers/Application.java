@@ -11,12 +11,12 @@ import models.*;
 
 public class Application extends Controller {
 
-
-
-    public static void index() {
-
-        render();
+    public static void order()
+    {
+        render("app/Views/Application/order.html");
     }
+
+
 
     public static void confirm() {
 
@@ -65,7 +65,7 @@ public class Application extends Controller {
     }
     public static void log_in()
     {
-        
+
         render("app/Views/Application/log_in.html");
 
     }
