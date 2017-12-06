@@ -46,8 +46,12 @@ body {
 .content-form form div {
     margin-bottom: 19px;
 }
+.content-form form .id,
 .content-form form .user,
-.content-form form .password {
+.content-form form .section,
+.content-form form .vehicle,
+.content-form form .starttime,
+.content-form form .endtime {
     width: 77%;
     height: 20px;
     padding: 10px;
@@ -94,7 +98,11 @@ body {
 
 /*输入框无内容便提示*/
 #remind_1,
-#remind_2 {
+#remind_2,
+#remind_3,
+#remind_4,
+#remind_5,
+#remind_6 {
     width: 76%;
     margin: 0 auto 2px;
     text-align: left;

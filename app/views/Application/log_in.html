@@ -11,26 +11,41 @@
     </header>
     <div class="content">
         <img class="content-logo" src="\public/images/form_logo.png" alt="logo">
-        <h1 class="content-title">登录</h1>
+        <h1 class="content-title">登录查看</h1>
         <div class="content-form">
             <form method="post" action="" onsubmit="return submitTest()">
+            <!-- 工号-->
                 <div id="change_margin_1">
-                    <input class="user" type="text" name="user" placeholder="请输入用户名" onblur="oBlur_1()" onfocus="oFocus_1()">
+                    <input class="id" type="text" name="id" placeholder="请填写工号" onblur="oBlur_1()" onfocus="oFocus_1()">
                 </div>
                 <!-- input的value为空时弹出提醒 -->
                 <p id="remind_1"></p>
+                 <!-- 姓名-->
                 <div id="change_margin_2">
-                    <input class="password" type="password" name="password" placeholder="请输入密码" onblur="oBlur_2()" onfocus="oFocus_2()">
+                    <input class="user" type="text" name="user" placeholder="请填写姓名" onblur="oBlur_2()" onfocus="oFocus_2()">
                 </div>
                 <!-- input的value为空时弹出提醒 -->
                 <p id="remind_2"></p>
+            <!-- 部门-->
                 <div id="change_margin_3">
+                    <input class="section" type="text" name="section" placeholder="请填写部门" onblur="oBlur_3()" onfocus="oFocus_3()">
+                </div>
+                <!-- input的value为空时弹出提醒 -->
+                <p id="remind_3"></p>
+            <!-- 车牌-->
+                <div id="change_margin_4">
+                    <input class="vehicle" type="text" name="vehicle" placeholder="请填写车牌号" onblur="oBlur_4()" onfocus="oFocus_4()">
+                </div>
+                <!-- input的value为空时弹出提醒 -->
+                <p id="remind_4"></p>
+            <!-- 登陆-->
+                <div id="change_margin_7">
                     <input class="content-form-signup" type="submit" value="登录">
                 </div>
             </form>
         </div>
         <div class="content-login-description">没有账户？</div>
-        <div><a class="content-login-link" href="GJsLearning.html">注册</a></div>
+        <div><a class="content-login-link" href="GJsLearning">注册</a></div>
     </div>
 <script src="\public/javascripts/common_form_test.js"></script>
 </body>
