@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test_third_part_log_in</title>
+</head>
+
+<script src="public/javascripts/jquery-1.6.4.min.js"></script>
+
+<script>
+
+    function test_third_part_log_in()
+    {
+
+        var userid="123456789";
+        var username="第三方测试";
+        $.ajax({
+            type : "POST",
+            url:"http://127.0.0.1/getdata",             //需要链接到服务器地址
+            data:{
+                "userid":userid,
+                "username":username
+            },
+            success: function (data, status) {//请求成功后的回调函数有两个参数
+                //var data_json=eval(data);
+                if(data==="0"){
+                    location.href="http://baidu.com";
+                }else{
+                    alert("失败");
+                }
+            }});
+
+    }
+</script>
+
+
+<body>
+
+
+<button value="test_third_part_log_in" onclick="test_third_part_log_in"></button>
+
+</body>
+</html>

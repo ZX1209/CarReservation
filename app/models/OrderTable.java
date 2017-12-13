@@ -8,8 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import java.util.Date;
+
 @Entity
-//@Table(name = "test_ordertable")
+@Table(name = "test_ordertable")
 public class OrderTable extends JPASupport {
     @Id
     @Column(name="UserID")
@@ -23,22 +25,22 @@ public class OrderTable extends JPASupport {
     public String vistorName;
 
     @Column(name="OrderDate")
-    public String orderDate;
+    public Date orderDate;
 
     @Column(name="InTime")
-    public String inTime;
+    public Date inTime;
 
     @Column(name="OutTime")
-    public String outTime;
+    public Date outTime;
     
-    public OrderTable(Long userID, Long vistorID, String username,String vistorName,String orderDate,String inTime,String outTime) {
+    public OrderTable(Long userID,String username,String vistorName) {
         this.userID = userID;
-        this.vistorID = vistorID;
+       // this.vistorID = vistorID;
         this.username = username;
         this.vistorName = vistorName;
-        this.orderDate = orderDate;
-        this.inTime = inTime;
-        this.outTime = outTime;	
+        this.orderDate = new java.util.Date();
+        //this.inTime = NULL;
+        //this.outTime = NULL;	
     }
 
 

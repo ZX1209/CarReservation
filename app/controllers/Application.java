@@ -9,12 +9,38 @@ import java.util.List;
 
 import models.*;
 
+import static play.test.FunctionalTest.renderArgs;
+
 public class Application extends Controller {
 
     public static void order()
     {
-    	OrderTable ordertable =new OrderTable(123l, 9l, "Bob", "zury", "B", "ob", "Bo");
+    	OrderTable ordertable =new OrderTable(2l,"Bob", "zury");
     	ordertable.save();
+        render("app/Views/Application/order.html");
+    }
+
+    public static void getdata()
+    {
+        String id=params.get("userid");
+        String name=params.get("username");
+
+        render(id,name);
+        render("app/Views/Application/GJsLearning.html");
+    }
+
+
+    public static void test_third_part_order()
+    {
+
+        render("app/Views/Application/test_third_part_order.html");
+    }
+
+
+
+
+    public static void test_third_part_log_in()
+    {
         render("app/Views/Application/order.html");
     }
 
@@ -39,7 +65,7 @@ public class Application extends Controller {
 
     //save   保存进数据库
     public static void save() {
-        News testNews = new News(1l,"asdf");
+        News testNews = new News(15,"guhygf");
         testNews.save();
 
         render();
