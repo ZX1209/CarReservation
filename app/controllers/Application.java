@@ -9,9 +9,35 @@ import java.util.List;
 
 import models.*;
 
+import static play.test.FunctionalTest.renderArgs;
+
 public class Application extends Controller {
 
     public static void order()
+    {
+        render("app/Views/Application/order.html");
+    }
+
+    public static void getdata()
+    {
+        String id=params.get("userid");
+        String name=params.get("username");
+
+        render(id,name);
+        render("app/Views/Application/GJsLearning.html");
+    }
+
+
+    public static void test_third_part_order()
+    {
+
+        render("app/Views/Application/test_third_part_order.html");
+    }
+
+
+
+
+    public static void test_third_part_log_in()
     {
         render("app/Views/Application/order.html");
     }
