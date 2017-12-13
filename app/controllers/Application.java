@@ -13,6 +13,8 @@ public class Application extends Controller {
 
     public static void order()
     {
+    	OrderTable ordertable =new OrderTable(123l, 9l, "Bob", "zury", "B", "ob", "Bo");
+    	ordertable.save();
         render("app/Views/Application/order.html");
     }
 
