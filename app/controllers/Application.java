@@ -63,10 +63,10 @@ public class Application extends Controller {
 
     //save   保存进数据库
     public static void save() {
-        News testNews = new News(1l,"asdf");
+        News testNews = new News(8l,"success?");
         testNews.save();
 
-        render();
+        renderText("success");
     }
 
     public static void secondtest() {
