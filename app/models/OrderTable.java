@@ -8,28 +8,40 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import java.util.Date;
+
 @Entity
-@Table(name = "ordertable")
+@Table(name = "test_ordertable")
 public class OrderTable extends JPASupport {
     @Id
     @Column(name="UserID")
-    private Long userID;
+    public Long userID;
     @Column(name="VistorID")
-    private Long vistorID;
+    public Long vistorID;
 
     @Column(name="UserName")
-    private String username;
+    public String username;
     @Column(name="VistorName")
-    private String vistorName;
+    public String vistorName;
 
     @Column(name="OrderDate")
-    private String orderDate;
+    public Date orderDate;
 
     @Column(name="InTime")
-    private String inTime;
+    public Date inTime;
 
     @Column(name="OutTime")
-    private String outTime;
+    public Date outTime;
+    
+    public OrderTable(Long userID,String username,String vistorName) {
+        this.userID = userID;
+       // this.vistorID = vistorID;
+        this.username = username;
+        this.vistorName = vistorName;
+        this.orderDate = new java.util.Date();
+        //this.inTime = NULL;
+        //this.outTime = NULL;	
+    }
 
 
 }

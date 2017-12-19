@@ -1,6 +1,6 @@
 // 全局变量a和b，分别获取用户框和密码框的value值
-var a = document.getElementsByTagName("input").user.value;
-var b = document.getElementsByTagName("input").password.value;
+var a = document.getElementsByID("change_margin_1").value;
+var b = document.getElementsByID("change_margin_2").value;
 
 //用户框失去焦点后验证value值
 function oBlur_1() {

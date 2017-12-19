@@ -1,13 +1,15 @@
 package models;
 
 
-import play.db.jpa.GenericModel;
 
+import play.db.jpa.JPASupport;
+import play.db.jpa.GenericModel;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@SuppressWarnings("deprecation")
 @Entity
 //@Table(name = "table_news")
 public class News extends GenericModel {

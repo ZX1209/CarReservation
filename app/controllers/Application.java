@@ -15,6 +15,8 @@ public class Application extends Controller {
 
     public static void order()
     {
+    	OrderTable ordertable =new OrderTable(2l,"Bob", "zury");
+    	ordertable.save();
         render("app/Views/Application/order.html");
     }
 
@@ -63,7 +65,9 @@ public class Application extends Controller {
 
     //save   保存进数据库
     public static void save() {
+
         News testNews = new News(8l,"success?");
+
         testNews.save();
 
         renderText("success");
