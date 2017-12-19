@@ -1,5 +1,6 @@
 package controllers;
 
+import net.sf.ehcache.search.expression.Or;
 import play.*;
 import play.mvc.*;
 
@@ -15,7 +16,7 @@ public class Application extends Controller {
 
     public static void order()
     {
-    	OrderTable ordertable =new OrderTable(2l,"Bob", "zury");
+    	OrderTable ordertable =new OrderTable(12l,"Bob", 13l,"zury");
     	ordertable.save();
         render("app/Views/Application/order.html");
     }
@@ -65,12 +66,20 @@ public class Application extends Controller {
 
     //save   保存进数据库
     public static void save() {
-
+        /*
         News testNews = new News(8l,"success?");
 
         testNews.save();
+        */
 
-        renderText("success");
+        /*success
+        OrderTable orderTabletest = new OrderTable(3l,"testuser2",4l,"testvisitor2");
+        orderTabletest.save();
+        */
+        OrderTable orderTabletest = OrderTable.find("from OrderTable where UserID=? ",3l).first();
+
+
+        renderText(orderTabletest.getUserName());
     }
 
     public static void secondtest() {
