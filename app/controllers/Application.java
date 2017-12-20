@@ -79,7 +79,15 @@ public class Application extends Controller {
         OrderTable orderTabletest = OrderTable.find("from OrderTable where UserID=? ",3l).first();
 
 
+        /*
         renderText(orderTabletest.getUserName());
+        */
+
+
+        //let orderTabletest can be used in the html
+        //like ${orderTabletest.username}
+        //html first then the value to send
+        render("app/Views/Application/GJsLearning.html",orderTabletest);
     }
 
     public static void secondtest() {
