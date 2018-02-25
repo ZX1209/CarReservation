@@ -8,6 +8,9 @@ hgroup, menu, nav, output, section, summary, time, mark, audio, video {
     padding: 0;
     border: 0
 }
+
+
+
 body {
     font-family: "Î¢ÈíÑÅºÚ";
     background: #f4f4f4;
@@ -22,7 +25,7 @@ body {
 
 /*content*/
 .content {
-    width: 28%;
+    width: 40%;
     margin: 70px auto 0;
     text-align: center;
 }

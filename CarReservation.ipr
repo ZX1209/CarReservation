@@ -20,4 +20,30 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
   </component>
+  <component name="libraryTable">
+    <library name="com.github.javafaker:javafaker:0.11" type="repository">
+      <properties maven-id="com.github.javafaker:javafaker:0.11" />
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/javafaker-0.11.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/snake-yaml-v1.18-android.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/generex-1.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/automaton-1.11-8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$PROJECT_DIR$/lib/javafaker-0.11-javadoc.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.4-javadoc.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/snake-yaml-v1.18-android-javadoc.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/generex-1.0.1-javadoc.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/automaton-1.11-8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/javafaker-0.11-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.4-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/snake-yaml-v1.18-android-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/generex-1.0.1-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/automaton-1.11-8-sources.jar!/" />
+      </SOURCES>
+    </library>
+  </component>
 </project>

@@ -16,8 +16,6 @@ public class Application extends Controller {
 
     public static void order()
     {
-    	OrderTable ordertable =new OrderTable(12l,"Bob", 13l,"zury");
-    	ordertable.save();
         render("app/Views/Application/order.html");
     }
 

@@ -1,9 +1,11 @@
 // 全局变量a和b，分别获取用户框和密码框的value值
-var a = document.getElementsByID("change_margin_1").value;
-var b = document.getElementsByID("change_margin_2").value;
+var a = document.getElementsByName("id").item("value").value;
+var b = document.getElementsByName("user").item("value").value;
 
 //用户框失去焦点后验证value值
 function oBlur_1() {
+    a = document.getElementsByName("id").item("value").value;
+
     if (!a) { //用户框value值为空
         document.getElementById("remind_1").innerHTML = "请输入用户名！";
         document.getElementById("change_margin_1").style.marginBottom = 1 + "px";
@@ -15,6 +17,7 @@ function oBlur_1() {
 
 //密码框失去焦点后验证value值
 function oBlur_2() {
+    b = document.getElementsByName("user").item("value").value;
     if (!b) { //密码框value值为空
         document.getElementById("remind_2").innerHTML = "请输入密码！";
         document.getElementById("change_margin_2").style.marginBottom = 1 + "px";
@@ -41,6 +44,8 @@ function oFocus_2() {
 
 //若输入框为空，阻止表单的提交
 function submitTest() {
+    a = document.getElementsByName("id").item("value").value;
+    b = document.getElementsByName("user").item("value").value;
     if (!a && !b) { //用户框value值和密码框value值都为空
         document.getElementById("remind_1").innerHTML = "请输入工号！";
         document.getElementById("change_margin_1").style.marginBottom = 1 + "px";

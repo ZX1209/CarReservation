@@ -5,6 +5,13 @@
 # Home page
 GET     /                                       Application.order
 
+
+# 这里通过url来获取参数,,参数分配似乎是自动分配的...[Example]
+GET      /show/{i}                              ExampleControl.show
+
+# GL example
+GET     /Example                                ExampleControl.order
+
 GET     /test_third_part_log_in                 Application.test_third_part_log_in
 
 POST    /getdata                                Application.getdata
